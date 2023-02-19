@@ -1,3 +1,6 @@
+#ifndef NOVEL_HPP_
+#define NOVEL_HPP_
+
 #include "Book.hpp"
 #include <iostream>
 #include <string>
@@ -45,3 +48,4 @@ class Novel: public Book{
     bool has_film_; 
     review review_; 
 };
+#endif

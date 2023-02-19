@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef MANUAL_HPP_
+#define MANUAL_HPP_
 #include "Book.hpp"
 #include <string>
 
@@ -21,4 +21,4 @@ private:
     bool visual_aid_;
     bool has_website_;
 }; 
-
+#endif 

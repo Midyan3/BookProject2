@@ -12,7 +12,7 @@ double Novel::getAverageRating(){
 void Novel::calculateAverageRating(){
     int total;
     int number_of_people;
-   for(int i = 0; i <= review_list_.size(); i++){
+   for(unsigned int i = 0; i <= review_list_.size(); i++){
         total += review_list_[i].score;
         number_of_people++;
    }
@@ -40,7 +40,7 @@ void Novel::setFilmAdaptation(){
 }
 std::string Novel::getCharacterListString(){
     std::string character_list;
-    for(int i = 0; i <= character_list_.size(); i++){
+    for(unsigned int i = 0; i <= character_list_.size(); i++){
         character_list = character_list[i] + " "; 
     }
     return character_list;

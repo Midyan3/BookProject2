@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Book.hpp"
-#include "Book.cpp"
+
 
 enum grade_level{NONE, ELEMENTARY, JUNIOR_HIGH, HIGH_SCHOOL, COLLEGE};  
 std::string convert[] = {"NONE", "ELEMENTARY", "JUNIOR_HIGH", "HIGH_SCHOOL", "COLLEGE"};  
