@@ -48,5 +48,10 @@ std::string Novel::getCharacterListString(){
 vector<std::string> Novel::getCharacterList(){
     return character_list_;
 }
+
+void Novel::setGenre(const std::string& new_genre){
+    genre_ = new_genre;
+}
+
 std::string Novel::getGenre(){return genre_;}
 void Novel::setGenre(std::string genre){genre_ = genre;}

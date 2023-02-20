@@ -18,6 +18,8 @@ class Novel: public Book{
     Novel();
     Novel(std::string title, std::string author, int page_count, std::string genre, bool has_film, bool is_digital = false);
 
+    void setGenre(const std::string& new_genre);
+
     std::string getGenre();
 
     void setGenre(std::string genre);
