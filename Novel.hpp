@@ -16,7 +16,7 @@ struct review{
 class Novel: public Book{
     public:
     Novel();
-    Novel(std::string title, std::string author, int page_count, std::string genre, bool has_film, bool is_digital = false);
+    Novel(std::string title, std::string author, int page_count, std::string genre, bool is_digital = false ,bool has_film = false);
 
     void setGenre(const std::string& new_genre);
 
