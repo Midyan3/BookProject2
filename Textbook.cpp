@@ -3,7 +3,7 @@
 Textbook::Textbook():Book(), subject_(""), review_question_(false), grade_level_(NONE)
 {}
 
-Textbook::Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, const grade_level grade_level, bool review_question , bool digital){
+Textbook::Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital, const grade_level grade_level , bool review_question){
     Book(title, author, page_count, digital);
     subject_ = subject;
     review_question_ = review_question;
@@ -25,7 +25,8 @@ std::string Textbook::getSubject(){
     return subject_;
 }
 std::string Textbook::getGradeLevel(){
-    std::string grade(convert[grade_level_]);
+    int num = grade_level_;
+    std::string grade(convert[num]);
     return grade;
 }
 
