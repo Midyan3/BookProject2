@@ -2,18 +2,20 @@
 #define MANUAL_HPP_
 #include "Book.hpp"
 #include <string>
+#include <regex>
 
 class Manual: public Book{
 public:
     Manual();
-    Manual(std::string title, std::string author, int page_count,std::string url,std::string device_name,bool visual_aid,bool is_digital = false, bool has_website = false);
+    Manual(const std::string title, const std::string author, int page_count, const std::string device_name,bool is_digital = false, const std::string url = "",bool visual_aid = false);
     void setDevice(const std::string& device_name);
     std::string getDevice() const;
-    void setWebsite(const std::string& website_name);
+    bool setWebsite(const std::string& website_name);
     void setVisualAid(bool new_has_aids);
     std::string getWebsite() const;
     bool hasVisualAid();
     bool hasWebsite();
+    bool URLhelper(const std::string& url);
 
 private:
     std::string url_; 

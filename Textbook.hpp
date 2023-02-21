@@ -5,7 +5,7 @@
 #include "Book.hpp"
 
 
-enum grade_level{NONE, ELEMENTARY, JUNIOR_HIGH, HIGH_SCHOOL, COLLEGE};  
+enum grade_level{NONE = 0, ELEMENTARY = 1, JUNIOR_HIGH = 2, HIGH_SCHOOL = 3, COLLEGE = 4};  
 std::string convert[] = {"NONE", "ELEMENTARY", "JUNIOR_HIGH", "HIGH_SCHOOL", "COLLEGE"};  
 
 class Textbook:public Book{
