@@ -9,8 +9,8 @@ int main()
 
     // --------------Test 3 Class Novel------------------
     std::cout << "---------Starting Test 3 for Novel Class-----------" << std::endl;
-    Novel novel;
-
+    Novel novel("Tight", "jay muzz", 21, "Helen", false, false);
+    std::cout << "Genre should be Drama: " << novel.getGenre() << std::endl;
     // Test setting and getting the genre
     std::string new_genre = "Drama";
     novel.setGenre(new_genre);

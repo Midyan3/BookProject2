@@ -9,7 +9,7 @@ Textbook::Textbook(const std::string& title, const std::string& author, int page
     review_question_ = review_question;
     grade_level_ = grade_level;
 }
-void Textbook::setGradeLevel(grade_level grade_level){
+void Textbook::setGradeLevel(const grade_level& grade_level){
     grade_level_ = grade_level;
 }
 void Textbook::setReviewQuestions(){
@@ -18,13 +18,13 @@ void Textbook::setReviewQuestions(){
 void Textbook::setSubject(const std::string& subject){
     subject_ = subject;
 }
-bool Textbook::checkReviewQuestions(){
+bool Textbook::checkReviewQuestions() const{
     return review_question_;
 }
-std::string Textbook::getSubject(){
+std::string Textbook::getSubject() const{
     return subject_;
 }
-std::string Textbook::getGradeLevel(){
+std::string Textbook::getGradeLevel() const{
     int num = grade_level_;
     std::string grade(convert[num]);
     return grade;

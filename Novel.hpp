@@ -6,17 +6,18 @@
 #include <string>
 #include <vector>
 
-
-struct review {
-    double score;
-    std::string rating;
-};
+ struct review {
+        double score;
+        std::string rating;
+ }; 
 
 class Novel: public Book {
 public:
+
     Novel();
     Novel(std::string title, std::string author, int page_count, std::string genre, bool is_digital = false ,bool has_film = false);
-
+    
+   
     void setGenre(const std::string& new_genre);
 
     std::string getGenre();
@@ -39,6 +40,7 @@ public:
 
     void calculateAverageRating();
 
+
 private:
     std::string genre_;
     std::vector<std::string> character_list_;
@@ -48,3 +50,4 @@ private:
 };
 
 #endif
+

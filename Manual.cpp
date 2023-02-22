@@ -2,7 +2,7 @@
 #include <regex>
 
 Manual::Manual()
-    : Book("","",0,false), url_(""), device_name_(""), has_website_(false), visual_aid_(false) { }
+    :  url_(""), device_name_(""), has_website_(false), visual_aid_(false) { }
 
 Manual::Manual(const std::string title, const std::string author, int page_count, const std::string device_name,bool is_digital, const std::string url,bool visual_aid)
     : Book(title, author, page_count, is_digital)
@@ -10,7 +10,7 @@ Manual::Manual(const std::string title, const std::string author, int page_count
     url_= url;
     device_name_ = device_name;
     visual_aid_ = visual_aid; 
-    url_ = "Broken Link";
+    url_ = "";
     has_website_ = false;
     if(URLhelper(url)){
         url_ = url; 

@@ -1,8 +1,8 @@
 #include "Novel.hpp"
 
-Novel::Novel(std::string title, std::string author, int page_count, std::string genre, bool is_digital, bool has_film):Book(title, author, page_count, is_digital), genre_(genre), has_film_(has_film)
+Novel::Novel(std::string title, std::string author, int page_count, std::string genre, bool is_digital, bool has_film):Book(title, author, page_count, is_digital), genre_(genre), has_film_(has_film), averagerating_(0.0)
 {}
-Novel::Novel():Book("","",0,false), genre_(""), has_film_(false)
+Novel::Novel():Book("","",0,false), genre_(""), has_film_(false), averagerating_(0.0)
 {}
 
 double Novel::getAverageRating(){
@@ -44,7 +44,7 @@ std::string Novel::getCharacterListString(){
     for(const auto& character : character_list_){
         character_list += character + " "; 
     }    
-    return character_list;
+    return character_list.substr(0, character_list.size()-1);
 }
 std::vector<std::string> Novel::getCharacterList(){
     return character_list_;
