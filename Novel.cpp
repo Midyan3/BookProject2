@@ -37,13 +37,13 @@ void Novel::setFilmAdaptation(){
     has_film_=true;
 }
 std::string Novel::getCharacterListString(){
-    std::string character_list;
+    std::string character_list = "";
     for(const auto& character : character_list_){
         character_list += character + " "; 
     }    
     return character_list.substr(0, character_list.size()-1);
 }
-std::vector<std::string> Novel::getCharacterList(){
+std::vector<std::string> Novel::getCharacterList() const{
     return character_list_;
 }
 

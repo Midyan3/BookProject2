@@ -22,7 +22,7 @@ public:
 
     std::string getGenre();
 
-    std::vector<std::string> getCharacterList();
+    std::vector<std::string> getCharacterList() const;
 
     std::string getCharacterListString();
 
