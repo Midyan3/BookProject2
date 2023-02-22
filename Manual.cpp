@@ -23,10 +23,10 @@ Manual::Manual(const std::string title, const std::string author, int page_count
 void Manual::setDevice(const std::string& device_name){
     device_name_ = device_name;
 }
-bool Manual::hasVisualAid(){
+bool Manual::hasVisualAid() const{
     return visual_aid_;
 }
-bool Manual::hasWebsite(){
+bool Manual::hasWebsite() const{
     return has_website_;
 }
 std::string Manual::getWebsite() const{

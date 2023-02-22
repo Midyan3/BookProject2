@@ -2,6 +2,7 @@
 //#include<cassert>
 #include "Book.hpp"
 #include "Novel.hpp"
+#include "Textbook.hpp"
 
 int main()
 {
@@ -74,12 +75,12 @@ int main()
     std::cout << "Actual new device: " << actual_new_url << std::endl;
 
 */
-/*
+
     // --------------Test 2 Class Textbook------------------
     std::cout << "---------Starting Test 2 for Novel Class-----------" << std::endl;
 
     // Create a textbook with some properties
-    Textbook t;
+    Textbook t("Intro to Physics", "John Smith", 300, "Physics", true, grade_level::HIGH_SCHOOL, false);
 
     // Test getSubject method
     std::cout << "Subject of textbook: " << t.getSubject() << std::endl;
@@ -102,7 +103,10 @@ int main()
     // Test setReviewQuestions method
     t.setReviewQuestions();
     std::cout << "Textbook has review questions: " << t.checkReviewQuestions() << std::endl;
-*/
+     t.setReviewQuestions();
+    std::cout << "Textbook has review questions: " << t.checkReviewQuestions() << std::endl;
+
+/*
     // --------------Test 3 Class Novel------------------
     std::cout << "---------Starting Test 3 for Novel Class-----------" << std::endl;
     Novel novel("The Great Gatsby", "F. Scott Fitzgerald", 180, "Classic", false, false);
@@ -132,5 +136,5 @@ int main()
     novel.addReview(new_review_2);
     novel.calculateAverageRating();
     std::cout << "Average rating should be 3.75: " << novel.getAverageRating() << std::endl;
-
+*/
 }

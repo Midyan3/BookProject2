@@ -13,8 +13,8 @@ public:
     bool setWebsite(const std::string& website_name);
     void setVisualAid(bool new_has_aids);
     std::string getWebsite() const;
-    bool hasVisualAid();
-    bool hasWebsite();
+    bool hasVisualAid() const;
+    bool hasWebsite() const;
     bool URLhelper(const std::string& url);
 
 private:
