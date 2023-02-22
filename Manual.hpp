@@ -20,7 +20,8 @@ public:
 private:
     std::string url_; 
     std::string device_name_;
-    bool visual_aid_;
     bool has_website_;
+    bool visual_aid_;
+    
 }; 
 #endif 

@@ -9,7 +9,7 @@ int main()
 
     // --------------Test 3 Class Novel------------------
     std::cout << "---------Starting Test 3 for Novel Class-----------" << std::endl;
-    Novel novel("The Great Gatsby", "F. Scott Fitzgerald", 180, "Classic", false, false);
+    Novel novel;
 
     // Test setting and getting the genre
     std::string new_genre = "Drama";
@@ -37,5 +37,11 @@ int main()
     novel.addReview(new_review_2);
     novel.calculateAverageRating();
     std::cout << "Average rating should be 3.75: " << novel.getAverageRating() << std::endl;
+
+    std::cout << novel.getTitle() << std::endl;
+
+    std::cout << novel.getPageCount() << std::endl;
+
+    
 
 }

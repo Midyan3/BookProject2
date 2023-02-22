@@ -25,7 +25,7 @@ review Novel::createReview(const double review_score, const std::string&  review
     review_list_.push_back(new_review); 
     return new_review;
 }   
-void Novel::addReview(review new_review){
+void Novel::addReview(review& new_review){
     review_list_.push_back(new_review);
 }
 void Novel::addCharacter(std::string character){

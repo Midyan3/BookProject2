@@ -7,13 +7,13 @@
 #include <vector>
 
 
-struct review{
+struct review {
     double score;
     std::string rating;
 };
 
-class Novel: public Book{
-    public:
+class Novel: public Book {
+public:
     Novel();
     Novel(std::string title, std::string author, int page_count, std::string genre, bool is_digital = false ,bool has_film = false);
 
@@ -31,20 +31,20 @@ class Novel: public Book{
 
     void setFilmAdaptation();
 
-    review createReview(const double review_score, const std::string&  review);
+    review createReview(const double review_score, const std::string& review_text);
 
     double getAverageRating();
-    
-    void addReview(review new_review);
+
+    void addReview(review& new_review);
 
     void calculateAverageRating();
 
-    private:
+private:
     std::string genre_;
     std::vector<std::string> character_list_;
     std::vector<review> review_list_;
     double averagerating_;
     bool has_film_; 
-    review review_; 
 };
+
 #endif
