@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
 
 struct review{
     double score;
@@ -22,19 +21,17 @@ class Novel: public Book{
 
     std::string getGenre();
 
-    void setGenre(std::string genre);
-
-    vector<std::string> getCharacterList();
+    std::vector<std::string> getCharacterList();
 
     std::string getCharacterListString();
 
     void addCharacter(std::string character);
 
-    bool hasFilmAdaption();
+    bool hasFilmAdaptation();
 
     void setFilmAdaptation();
 
-    void createReview(double review_score, std::string  review);
+    review createReview(const double review_score, const std::string&  review);
 
     double getAverageRating();
     
@@ -44,8 +41,8 @@ class Novel: public Book{
 
     private:
     std::string genre_;
-    vector<std::string> character_list_;
-    vector<review> review_list_;
+    std::vector<std::string> character_list_;
+    std::vector<review> review_list_;
     double averagerating_;
     bool has_film_; 
     review review_; 
