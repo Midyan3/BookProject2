@@ -10,19 +10,16 @@ double Novel::getAverageRating(){
 }
 
 void Novel::calculateAverageRating(){
-    double total = 0;
-    double number_of_people = 0;
+    double total = 0.0;
    for( int i = 0; i <= review_list_.size() - 1; i++){
         total += review_list_[i].score;
-        number_of_people++;
    }
-    averagerating_ = total/number_of_people;
+    averagerating_ = total/review_list_.size();
 }
 review Novel::createReview(const double review_score, const std::string&  review_sum){
     review new_review;
     new_review.score = review_score;
     new_review.rating = review_sum;
-    review_list_.push_back(new_review); 
     return new_review;
 }   
 void Novel::addReview(review& new_review){
