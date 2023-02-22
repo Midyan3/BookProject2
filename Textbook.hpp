@@ -17,7 +17,7 @@ void setGradeLevel(grade_level grade_level);
 void setReviewQuestions();
 std::string getGradeLevel();
 bool checkReviewQuestions();
-std::string convert[5] = {"NONE", "ELEMENTARY", "JUNIOR_HIGH", "HIGH_SCHOOL", "COLLEGE"};
+std::string convert[5] = {"NONE", "ELEMENTARY", "JUNIOR HIGH", "HIGH SCHOOL", "COLLEGE"};
 
 private:
 std::string subject_;
