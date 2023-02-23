@@ -7,8 +7,8 @@
 #include <vector>
 
  struct review {
-        double score;
-        std::string rating;
+        double score_;
+        std::string rating_;
  }; 
 
 class Novel: public Book {
@@ -45,8 +45,8 @@ private:
     std::string genre_;
     std::vector<std::string> character_list_;
     std::vector<review> review_list_;
-    double averagerating_;
-    bool has_film_; 
+    double average_rating_;
+    bool has_film_adaptation_; 
 };
 
 #endif
