@@ -3,7 +3,7 @@
 Textbook::Textbook(): subject_(""), review_question_(false), grade_level_(NONE)
 {}
 
-Textbook::Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital, const grade_level new_grade_level , bool review_question):Book(title, author, page_count, digital)
+Textbook::Textbook(std::string title,  std::string author, int page_count, std::string subject, bool digital, grade_level new_grade_level , bool review_question):Book(title, author, page_count, digital)
 { 
     subject_ = subject;
     review_question_ = review_question;
