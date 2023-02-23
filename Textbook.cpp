@@ -1,6 +1,6 @@
 #include "Textbook.hpp"
 
-Textbook::Textbook():Book("","", 0, false), subject_(""), review_question_(false), grade_level_(NONE)
+Textbook::Textbook(): subject_(""), review_question_(false), grade_level_(NONE)
 {}
 
 Textbook::Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital, const grade_level grade_level , bool review_question){

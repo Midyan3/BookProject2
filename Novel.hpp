@@ -20,7 +20,7 @@ public:
    
     void setGenre(const std::string& new_genre);
 
-    std::string getGenre();
+    std::string getGenre() const;
 
     std::vector<std::string> getCharacterList() const;
 
@@ -28,15 +28,15 @@ public:
 
     void addCharacter(std::string character);
 
-    bool hasFilmAdaptation();
+    bool hasFilmAdaptation() const;
 
     void setFilmAdaptation();
 
     review createReview(const double review_score, const std::string& review_text);
 
-    double getAverageRating();
+    double getAverageRating() const;
 
-    void addReview(review& new_review);
+    void addReview(const review& new_review);
 
     void calculateAverageRating();
 
