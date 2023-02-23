@@ -10,14 +10,14 @@ enum grade_level{NONE = 0, ELEMENTARY = 1, JUNIOR_HIGH = 2, HIGH_SCHOOL = 3, COL
 class Textbook:public Book{
 public:
 Textbook();
-Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital = false ,const grade_level grade_level = NONE, bool review_question = false);
+Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital = false ,const grade_level new_grade_level = NONE, bool review_question = false);
 void setSubject(const std::string& subject);
 std::string getSubject() const;
 void setGradeLevel(const grade_level& grade_level);
 void setReviewQuestions();
 std::string getGradeLevel() const;
 bool checkReviewQuestions() const;
-const std::string convert[5] = {"NONE", "ELEMENTARY", "JUNIOR HIGH", "HIGH SCHOOL", "COLLEGE"};
+
 
 private:
 std::string subject_;
