@@ -9,8 +9,8 @@ Textbook::Textbook(const std::string& title, const std::string& author, int page
     review_question_ = review_question;
     grade_level_ = new_grade_level;
 }
-void Textbook::setGradeLevel(const grade_level& grade_level){
-    grade_level_ = grade_level;
+void Textbook::setGradeLevel(const grade_level& new_grade_level){
+    grade_level_ = new_grade_level;
 }
 void Textbook::setReviewQuestions(){
     review_question_ = true;

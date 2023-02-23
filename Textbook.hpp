@@ -5,7 +5,7 @@
 #include "Book.hpp"
 
 
-enum grade_level{NONE = 0, ELEMENTARY = 1, JUNIOR_HIGH = 2, HIGH_SCHOOL = 3, COLLEGE = 4};  
+enum grade_level{NONE, ELEMENTARY, JUNIOR_HIGH , HIGH_SCHOOL , COLLEGE };  
 
 class Textbook:public Book{
 public:
@@ -13,7 +13,7 @@ Textbook();
 Textbook(const std::string& title, const std::string& author, int page_count, const std::string& subject, bool digital = false ,const grade_level new_grade_level = NONE, bool review_question = false);
 void setSubject(const std::string& subject);
 std::string getSubject() const;
-void setGradeLevel(const grade_level& grade_level);
+void setGradeLevel(const grade_level& new_grade_level);
 void setReviewQuestions();
 std::string getGradeLevel() const;
 bool checkReviewQuestions() const;
