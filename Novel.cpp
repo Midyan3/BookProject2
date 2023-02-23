@@ -16,18 +16,17 @@ void Novel::calculateAverageRating(){
    }
     average_rating_ = total/review_list_.size();
 }
-review Novel::createReview(const double review_score, const std::string&  review_sum){
+review Novel::createReview(const double score, const std::string&  rating){
     review new_review;
-    new_review.score_ = review_score;
-    new_review.rating_ = review_sum;
+    new_review.score_ = score;
+    new_review.rating_ = rating;
     return new_review;
 }   
 void Novel::addReview(const review& new_review){
     review_list_.push_back(new_review);
 }
-void Novel::addCharacter(std::string character){
+void Novel::addCharacter(const std::string character){
     character_list_.push_back(character);
-    std::cout<<character_list_[0]<<std::endl;
 }
 
 bool Novel::hasFilmAdaptation() const{
@@ -38,8 +37,8 @@ void Novel::setFilmAdaptation(){
 }
 std::string Novel::getCharacterListString(){
     std::string character_list = "";
-    for(const auto& character : character_list_){
-        character_list += character; 
+     for(int i=0; i<character_list_.size(); i++){
+        character_list += character_list_[i]; 
         character_list += " "; 
     }    
     return character_list.substr(0, character_list.size()-1);
@@ -52,4 +51,7 @@ void Novel::setGenre(const std::string& new_genre){
     genre_ = new_genre;
 }
 
-std::string Novel::getGenre() const{return genre_;}
+std::string Novel::getGenre() const{
+    return genre_;
+}
+

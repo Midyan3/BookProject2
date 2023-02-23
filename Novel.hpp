@@ -26,13 +26,13 @@ public:
 
     std::string getCharacterListString();
 
-    void addCharacter(std::string character);
+    void addCharacter(const std::string character);
 
     bool hasFilmAdaptation() const;
 
     void setFilmAdaptation();
 
-    review createReview(const double review_score, const std::string& review_text);
+    review createReview(const double score, const std::string& rating);
 
     double getAverageRating() const;
 
