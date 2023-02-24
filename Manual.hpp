@@ -86,6 +86,11 @@ public:
     bool URLhelper(const std::string& url);
 
 private:
+/**  - a string that represents a url
+  - a string that represents the name of the device
+  - a boolean indicating whether the Manual has a visual aid
+  - a boolean indicating whether the Manual has a website
+  */
     std::string url_; 
     std::string device_name_;
     bool has_website_;
